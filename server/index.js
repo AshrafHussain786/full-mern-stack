@@ -1,11 +1,3 @@
-// MERN = Mongo + Express + React + Node
-
-// Development = Node.js server + React server
-
-// MEN
-
-// E - Express
-
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -19,6 +11,11 @@ app.use(express.json())
 
 mongoose.connect('mongodb://localhost:27017/full-mern-stack-video')
 
+app.get("/", (req, res) => {
+	res.send("Hello World from Server Index.js file");
+  });	
+  
+  
 app.post('/api/register', async (req, res) => {
 	console.log(req.body)
 	try {

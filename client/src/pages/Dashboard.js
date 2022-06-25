@@ -33,6 +33,7 @@ const Dashboard = () => {
 				populateQuote()
 			}
 		}
+	// eslint-disable-next-line
 	}, [])
 
 	async function updateQuote(event) {
